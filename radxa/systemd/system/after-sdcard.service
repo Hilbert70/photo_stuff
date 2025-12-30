@@ -1,0 +1,12 @@
+[Unit]
+Description=Launch My Daemon
+Requires=mnt-sdcard.mount
+After=mnt-sdcard.mount
+RequiresMountsFor=/mnt/sdcard
+
+[Service]
+ExecStart=/root/bin/after-sdcard.sh
+
+[Install]
+WantedBy=mnt-sdcard.mount
+
