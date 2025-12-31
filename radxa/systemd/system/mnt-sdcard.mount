@@ -1,0 +1,11 @@
+[Unit]
+Description=Mount SD Card
+
+[Mount]
+What=/dev/mmcblk1
+Where=/mnt/sdcard
+Type=auto
+Options=rw,user,nofail,uid=1000,gid=1000
+
+[Install]
+WantedBy=multi-user.target
