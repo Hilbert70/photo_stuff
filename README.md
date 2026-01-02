@@ -4,13 +4,7 @@ This repo holds the code on a radxa zero w3 with emmc and serverside code to han
 TODO:
  - [ ] create a server side script to move the photos to
  - [ ] create a server config
- - [ ] create a gphoto service to ?move? the files to the radxa and then to the 'server' 
-
-
-WONT DO (for now):
- - [ ] ~~create ap mode if there are no ssid's configured~~
- - [ ] ~~create a web service to configure the radxa~~
- - [ ] ~~make it start/stop on the config on the sdcard~~
+'server' 
 
 ## Code formating and spacing
 
@@ -91,25 +85,4 @@ Just move the files in a `yyyy/month` the following would work:
 do_shoebox.py -l  -s ./todo -o /srv/media/photos/RAW -e nef
 ```
 
-
-## AP mode
-
-Install
-
-```
-apt-get install hostapd dnsmasq
-```
-
-After installing disable and stop the `hostapd` and `dnsmasq` 
-services:
-
-```
-systemctl stop hostapd.service
-systemctl disable hostapd.service
-
-systemctl stop dnsmasq.service
-systemctl disable dnsmasq.service
-```
-
-It can be enabled later when there are no ssids active or available. Will decide later.
 

@@ -1,2 +1,0 @@
-SUBSYSTEM=="block", KERNEL=="mmcblk*", ACTION=="add", TAG+="systemd", ENV{SYSTEMD_WANTS}="mnt-sdcard.mount" 
-SUBSYSTEM=="block", KERNEL=="mmcblk*", ACTION=="add", TAG+="systemd", ENV{SYSTEMD_WANTS}="after-sdcard.service"
